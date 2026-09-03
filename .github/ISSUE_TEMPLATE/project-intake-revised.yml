@@ -321,9 +321,9 @@ body:
   attributes:
     label: Modeling Platform
     options:
-    - MODFLOW-NWT
+    - MODFLOW
     - IWFM
-    - MODFLOW 6
+    - TTIM
     - GSFLOW
     - SWB
   validations:
