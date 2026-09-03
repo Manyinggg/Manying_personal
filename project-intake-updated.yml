@@ -1,0 +1,271 @@
+name: Digital project / IT intake
+description: Detailed project and model intake for repository, IT, modeling, architecture, HPC, and hosting coordination.
+title: 'Digital project intake: '
+body:
+- type: markdown
+  attributes:
+    value: Use this form for project intake and repository/IT coordination. Provide the detailed model, architecture, hosting,
+      data-location, and workflow information requested below.
+- type: input
+  id: client-name
+  attributes:
+    label: Client Name
+  validations:
+    required: true
+- type: input
+  id: project-name
+  attributes:
+    label: Project Name
+    placeholder: Project or client project name
+  validations:
+    required: true
+- type: input
+  id: project-code
+  attributes:
+    label: EKI Project Code
+    placeholder: e.g., C50238.00
+  validations:
+    required: true
+- type: textarea
+  id: key-staff
+  attributes:
+    label: Key Staff
+    description: Identify the Project Manager, Modeling Lead, and Repository Administrator.
+    placeholder: 'Project Manager:
+
+      Modeling Lead:
+
+      Repository Administrator:'
+  validations:
+    required: true
+- type: textarea
+  id: confidentiality-access
+  attributes:
+    label: Confidentiality and Access Requirements
+    description: Describe confidentiality, repository visibility, access restrictions, or other requirements.
+  validations:
+    required: true
+- type: input
+  id: project-timeline
+  attributes:
+    label: Project Timeline
+    description: Provide project start and/or phase dates.
+    placeholder: 'e.g., Start: 2026-06-15; Phase 1: 2026-07-01–2026-09-30'
+  validations:
+    required: true
+- type: dropdown
+  id: project-status
+  attributes:
+    label: Project Status
+    options:
+    - Active
+    - On Hold
+    - Complete
+    - Archived
+  validations:
+    required: true
+- type: input
+  id: last-updated
+  attributes:
+    label: Last Updated
+    placeholder: e.g., 2026-09-03
+  validations:
+    required: true
+- type: textarea
+  id: model-description
+  attributes:
+    label: Model Description
+    description: Provide a 1–2 sentence description of the model's origin/history, purpose, and ongoing use.
+    placeholder: e.g., Developed by EKI on behalf of a client to support SGMA compliance, subsidence analysis, or basin yield
+      estimation.
+  validations:
+    required: true
+- type: dropdown
+  id: model-platform
+  attributes:
+    label: Modeling Platform
+    options:
+    - MODFLOW-NWT
+    - IWFM
+    - MODFLOW 6
+    - GSFLOW
+    - SWB
+  validations:
+    required: true
+- type: input
+  id: model-version
+  attributes:
+    label: Model Version
+    placeholder: Free-text software/version
+  validations:
+    required: true
+- type: textarea
+  id: spatial-domain
+  attributes:
+    label: Spatial Domain
+    description: Describe the geographic area covered by the model and provide a shapefile or map reference if available.
+    placeholder: e.g., Tule Subbasin; include boundary/map reference or repository link if available.
+  validations:
+    required: true
+- type: textarea
+  id: temporal-domain
+  attributes:
+    label: Temporal Domain
+    description: Describe the model's historical calibration, verification, and/or forecast periods and whether it uses water-year
+      or calendar-year basis.
+  validations:
+    required: true
+- type: input
+  id: runtime
+  attributes:
+    label: Approximate Runtime
+    placeholder: e.g., 45 minutes per model run
+  validations:
+    required: true
+- type: input
+  id: storage-footprint
+  attributes:
+    label: Approximate Storage Footprint
+    description: Include input and output files for a single model run.
+    placeholder: e.g., 25 GB per run
+  validations:
+    required: true
+- type: checkboxes
+  id: model-applications
+  attributes:
+    label: Model Applications
+    description: Select the primary use cases for this model.
+    options:
+    - label: SGMA Annual Report
+    - label: Subsidence
+    - label: Litigation
+    - label: Basin yield estimation
+    - label: Other
+      required: false
+  validations:
+    required: true
+- type: textarea
+  id: model-workflows
+  attributes:
+    label: Model Workflows
+    description: Briefly describe major scripted workflows and where they are located in the repository, including links to
+      relevant subfolders/scripts where available.
+    placeholder: Describe preprocessing, model execution, post-processing, automation, and relevant repository paths/links.
+  validations:
+    required: true
+- type: textarea
+  id: model-output-locations
+  attributes:
+    label: Model Output File Locations
+    description: Provide Egnyte/Azure file paths and/or hyperlinks where model outputs are stored.
+  validations:
+    required: true
+- type: textarea
+  id: ancillary-data-locations
+  attributes:
+    label: Ancillary Project Data Locations
+    description: Provide Egnyte/Azure paths and/or hyperlinks for tabular inputs, GIS shapefiles, rasters, and other ancillary
+      data used for model development or post-processing.
+  validations:
+    required: true
+- type: textarea
+  id: architecture-summary
+  attributes:
+    label: Summary of Architecture
+    description: Briefly describe the model execution environment and architecture.
+    placeholder: 'e.g., Model files are copied from the local repo and run on the C: drive of an Azure VM; or model is compiled
+      into a Docker image for execution.'
+  validations:
+    required: true
+- type: checkboxes
+  id: architecture-components
+  attributes:
+    label: Architecture Components
+    description: Select all components included in the model workflow. Provide associated repository paths/links in the follow-up
+      field below.
+    options:
+    - label: Conda Environment(s)
+    - label: Docker
+    - label: PEST / pyemu workbook
+    - label: HPC architecture
+    - label: Web hosting
+    - label: Other
+  validations:
+    required: true
+- type: textarea
+  id: architecture-component-paths
+  attributes:
+    label: Architecture Component Paths / Links
+    description: For selected components, provide relevant paths or hyperlinks (e.g., env.yml, Dockerfile, PEST/pyemu workbooks/scripts)
+      and describe any other architecture components.
+    placeholder: 'Conda env.yml:
+
+      Dockerfile:
+
+      PEST/pyemu:
+
+      Other:'
+  validations:
+    required: false
+- type: dropdown
+  id: hpc-required
+  attributes:
+    label: HPC Cluster Required?
+    options:
+    - 'Yes'
+    - 'No'
+  validations:
+    required: true
+- type: textarea
+  id: hpc-details
+  attributes:
+    label: HPC Architecture Details
+    description: If HPC is required, provide the application/requirements, Docker image links, scripted workflow links, and
+      GitHub Actions workflow links. If not applicable, enter N/A.
+    placeholder: 'HPC application and requirements:
+
+      Docker image(s):
+
+      Scripted workflows:
+
+      GitHub Actions workflow:'
+  validations:
+    required: true
+- type: dropdown
+  id: web-hosting-required
+  attributes:
+    label: Web Hosting Required?
+    options:
+    - 'Yes'
+    - 'No'
+  validations:
+    required: true
+- type: textarea
+  id: web-hosting-details
+  attributes:
+    label: Hosting Architecture Details
+    description: If web hosting is required, provide the hosting services/requirements, Docker image links, scripted workflow
+      links, and GitHub Actions workflow links. If not applicable, enter N/A.
+    placeholder: 'Hosting services and requirements:
+
+      Docker image(s):
+
+      Scripted workflows:
+
+      GitHub Actions workflow:'
+  validations:
+    required: true
+- type: textarea
+  id: related-work
+  attributes:
+    label: Related Repositories, Issues, Contracts, or Systems
+    description: Link existing repositories, proposals, contracts, tickets, dashboards, models, data systems, or prior work.
+  validations:
+    required: false
+- type: textarea
+  id: open-questions
+  attributes:
+    label: Open Questions or Concerns
+    description: List anything the project team wants GitHub administrators, reviewers, project managers, or IT to consider.
+  validations:
+    required: false
