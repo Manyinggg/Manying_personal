@@ -1,0 +1,512 @@
+name: Digital project / IT intake
+description: Detailed project and model intake for repository, IT, modeling, architecture, HPC, and hosting coordination.
+title: 'Digital project intake: '
+body:
+- type: markdown
+  attributes:
+    value: Use this form for project intake and repository/IT coordination. Provide the detailed model, architecture, hosting,
+      data-location, and workflow information requested below.
+- type: input
+  id: client-name
+  attributes:
+    label: Client Name
+  validations:
+    required: true
+- type: input
+  id: project-name
+  attributes:
+    label: Project Name
+    placeholder: Project or client project name
+  validations:
+    required: true
+- type: input
+  id: project-code
+  attributes:
+    label: EKI Project Code
+    placeholder: e.g., C50238.00
+  validations:
+    required: true
+- type: input
+  id: project-manager
+  attributes:
+    label: Project Manager
+    description: Enter the name of the project manager. This can be converted to a personnel dropdown later.
+    placeholder: e.g., Jane Smith
+  validations:
+    required: true
+- type: input
+  id: modeling-lead
+  attributes:
+    label: Modeling Lead
+    description: Enter the name of the modeling lead. This can be converted to a personnel dropdown later.
+    placeholder: e.g., John Doe
+  validations:
+    required: true
+- type: input
+  id: repository-administrator
+  attributes:
+    label: Repository Administrator
+    description: Enter the name of the repository administrator. This can be converted to a personnel dropdown later.
+    placeholder: e.g., Alex Lee
+  validations:
+    required: true
+- type: textarea
+  id: confidentiality-access
+  attributes:
+    label: Confidentiality and Access Requirements
+    description: Describe confidentiality, repository visibility, access restrictions, or other requirements.
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |
+      ### Project Timeline
+      Select the start and end dates below. Use TBD for all three end-date fields when the end date is not yet known.
+- type: dropdown
+  id: project-start-year
+  attributes:
+    label: Start Date — Year
+    options:
+    - '2026'
+    - '2027'
+    - '2028'
+    - '2029'
+    - '2030'
+    - '2031'
+    - '2032'
+    - '2033'
+    - '2034'
+    - '2035'
+  validations:
+    required: true
+- type: dropdown
+  id: project-start-month
+  attributes:
+    label: Start Date — Month
+    options:
+    - '01 - January'
+    - '02 - February'
+    - '03 - March'
+    - '04 - April'
+    - '05 - May'
+    - '06 - June'
+    - '07 - July'
+    - '08 - August'
+    - '09 - September'
+    - '10 - October'
+    - '11 - November'
+    - '12 - December'
+  validations:
+    required: true
+- type: dropdown
+  id: project-start-day
+  attributes:
+    label: Start Date — Day
+    options:
+    - '01'
+    - '02'
+    - '03'
+    - '04'
+    - '05'
+    - '06'
+    - '07'
+    - '08'
+    - '09'
+    - '10'
+    - '11'
+    - '12'
+    - '13'
+    - '14'
+    - '15'
+    - '16'
+    - '17'
+    - '18'
+    - '19'
+    - '20'
+    - '21'
+    - '22'
+    - '23'
+    - '24'
+    - '25'
+    - '26'
+    - '27'
+    - '28'
+    - '29'
+    - '30'
+    - '31'
+  validations:
+    required: true
+- type: dropdown
+  id: project-end-year
+  attributes:
+    label: End Date — Year
+    description: Select TBD if the end date is not yet known.
+    options:
+    - TBD
+    - '2026'
+    - '2027'
+    - '2028'
+    - '2029'
+    - '2030'
+    - '2031'
+    - '2032'
+    - '2033'
+    - '2034'
+    - '2035'
+  validations:
+    required: true
+- type: dropdown
+  id: project-end-month
+  attributes:
+    label: End Date — Month
+    options:
+    - TBD
+    - '01 - January'
+    - '02 - February'
+    - '03 - March'
+    - '04 - April'
+    - '05 - May'
+    - '06 - June'
+    - '07 - July'
+    - '08 - August'
+    - '09 - September'
+    - '10 - October'
+    - '11 - November'
+    - '12 - December'
+  validations:
+    required: true
+- type: dropdown
+  id: project-end-day
+  attributes:
+    label: End Date — Day
+    options:
+    - TBD
+    - '01'
+    - '02'
+    - '03'
+    - '04'
+    - '05'
+    - '06'
+    - '07'
+    - '08'
+    - '09'
+    - '10'
+    - '11'
+    - '12'
+    - '13'
+    - '14'
+    - '15'
+    - '16'
+    - '17'
+    - '18'
+    - '19'
+    - '20'
+    - '21'
+    - '22'
+    - '23'
+    - '24'
+    - '25'
+    - '26'
+    - '27'
+    - '28'
+    - '29'
+    - '30'
+    - '31'
+  validations:
+    required: true
+- type: dropdown
+  id: project-status
+  attributes:
+    label: Project Status
+    options:
+    - Active
+    - On Hold
+    - Complete
+    - Archived
+  validations:
+    required: true
+- type: dropdown
+  id: last-updated-year
+  attributes:
+    label: Last Updated — Year
+    description: Optional. Select the date the intake information was last updated.
+    options:
+    - Not provided
+    - '2026'
+    - '2027'
+    - '2028'
+    - '2029'
+    - '2030'
+    - '2031'
+    - '2032'
+    - '2033'
+    - '2034'
+    - '2035'
+  validations:
+    required: false
+- type: dropdown
+  id: last-updated-month
+  attributes:
+    label: Last Updated — Month
+    options:
+    - Not provided
+    - '01 - January'
+    - '02 - February'
+    - '03 - March'
+    - '04 - April'
+    - '05 - May'
+    - '06 - June'
+    - '07 - July'
+    - '08 - August'
+    - '09 - September'
+    - '10 - October'
+    - '11 - November'
+    - '12 - December'
+  validations:
+    required: false
+- type: dropdown
+  id: last-updated-day
+  attributes:
+    label: Last Updated — Day
+    options:
+    - Not provided
+    - '01'
+    - '02'
+    - '03'
+    - '04'
+    - '05'
+    - '06'
+    - '07'
+    - '08'
+    - '09'
+    - '10'
+    - '11'
+    - '12'
+    - '13'
+    - '14'
+    - '15'
+    - '16'
+    - '17'
+    - '18'
+    - '19'
+    - '20'
+    - '21'
+    - '22'
+    - '23'
+    - '24'
+    - '25'
+    - '26'
+    - '27'
+    - '28'
+    - '29'
+    - '30'
+    - '31'
+  validations:
+    required: false
+- type: textarea
+  id: model-description
+  attributes:
+    label: Model Description
+    description: Provide a 1–2 sentence description of the model's origin/history, purpose, and ongoing use.
+    placeholder: e.g., Developed by EKI on behalf of a client to support SGMA compliance, subsidence analysis, or basin yield
+      estimation.
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |
+      ### Modeling Platform and Version
+- type: dropdown
+  id: model-platform
+  attributes:
+    label: Modeling Platform
+    options:
+    - MODFLOW-NWT
+    - IWFM
+    - MODFLOW 6
+    - GSFLOW
+    - SWB
+  validations:
+    required: true
+- type: input
+  id: model-version
+  attributes:
+    label: Model Version
+    placeholder: Free-text software/version
+  validations:
+    required: true
+- type: textarea
+  id: spatial-domain
+  attributes:
+    label: Spatial Domain
+    description: Describe the geographic area covered by the model and provide a shapefile or map reference if available.
+    placeholder: e.g., Tule Subbasin; include boundary/map reference or repository link if available.
+  validations:
+    required: true
+- type: textarea
+  id: temporal-domain
+  attributes:
+    label: Temporal Domain
+    description: Describe the model's historical calibration, verification, and/or forecast periods and whether it uses water-year
+      or calendar-year basis.
+  validations:
+    required: true
+- type: input
+  id: runtime-days
+  attributes:
+    label: Runtime — Days
+    placeholder: e.g., 0
+  validations:
+    required: true
+- type: input
+  id: runtime-hours
+  attributes:
+    label: Runtime — Hours
+    placeholder: e.g., 2
+  validations:
+    required: true
+- type: input
+  id: runtime-minutes
+  attributes:
+    label: Runtime — Minutes
+    placeholder: e.g., 45
+  validations:
+    required: true
+- type: input
+  id: storage-amount
+  attributes:
+    label: Storage Per Run — Amount
+    description: Include input and output files for a single model run.
+    placeholder: e.g., 25
+  validations:
+    required: true
+- type: dropdown
+  id: storage-unit
+  attributes:
+    label: Storage Per Run — Unit
+    options:
+    - KB
+    - MB
+    - GB
+    - TB
+  validations:
+    required: true
+- type: checkboxes
+  id: model-applications
+  attributes:
+    label: Model Applications
+    description: Select the primary use cases for this model.
+    options:
+    - label: SGMA Annual Report
+    - label: Subsidence
+    - label: Litigation
+    - label: Basin yield estimation
+    - label: Other
+      required: false
+  validations:
+    required: true
+- type: textarea
+  id: model-workflows
+  attributes:
+    label: Model Workflows
+    description: Briefly describe major scripted workflows and where they are located in the repository, including links to
+      relevant subfolders/scripts where available.
+    placeholder: Describe preprocessing, model execution, post-processing, automation, and relevant repository paths/links.
+  validations:
+    required: true
+- type: textarea
+  id: model-output-locations
+  attributes:
+    label: Model Output File Locations
+    description: Provide Egnyte/Azure file paths and/or hyperlinks where model outputs are stored.
+  validations:
+    required: true
+- type: textarea
+  id: ancillary-data-locations
+  attributes:
+    label: Ancillary Project Data Locations
+    description: Provide Egnyte/Azure paths and/or hyperlinks for tabular inputs, GIS shapefiles, rasters, and other ancillary
+      data used for model development or post-processing.
+  validations:
+    required: true
+- type: textarea
+  id: architecture-summary
+  attributes:
+    label: Summary of Architecture
+    description: Briefly describe the model execution environment and architecture.
+    placeholder: 'e.g., Model files are copied from the local repo and run on the C: drive of an Azure VM; or model is compiled
+      into a Docker image for execution.'
+  validations:
+    required: true
+- type: textarea
+  id: architecture-components
+  attributes:
+    label: Architecture Components
+    description: Describe the components included in the model workflow and how they relate to one another.
+    placeholder: |
+      e.g., Conda environment, Docker image, PEST/pyemu workbook, scripts, HPC resources, web services, or other components.
+      Notes: Include versions, dependencies, repository paths/links, or other details that would help reproduce the workflow.
+  validations:
+    required: true
+- type: textarea
+  id: architecture-component-paths
+  attributes:
+    label: Architecture Component Paths / Links
+    description: Provide relevant repository paths or hyperlinks for architecture components, if available.
+    placeholder: |
+      e.g., env.yml, Dockerfile, PEST/pyemu workbooks/scripts, workflow files, service configuration, or other repository links.
+      Notes: Include enough detail for an administrator or reviewer to locate the relevant files.
+  validations:
+    required: false
+- type: dropdown
+  id: hpc-required
+  attributes:
+    label: HPC Cluster Required?
+    options:
+    - 'Yes'
+    - 'No'
+  validations:
+    required: true
+- type: textarea
+  id: hpc-details
+  attributes:
+    label: HPC Architecture
+    description: Describe the HPC architecture and requirements. If not applicable, enter N/A.
+    placeholder: |
+      e.g., HPC cluster, scheduler/queue, CPU/GPU requirements, Docker/Singularity image, data staging, and execution workflow.
+      Notes: Include relevant repository paths/links, image references, scripted workflows, and GitHub Actions workflows where available.
+  validations:
+    required: true
+- type: dropdown
+  id: web-hosting-required
+  attributes:
+    label: Web Hosting Required?
+    options:
+    - 'Yes'
+    - 'No'
+  validations:
+    required: true
+- type: textarea
+  id: web-hosting-details
+  attributes:
+    label: Hosting Architecture
+    description: Describe the hosting architecture and requirements. If not applicable, enter N/A.
+    placeholder: |
+      e.g., Azure service/VM, containerized application, web service, storage, networking, authentication, and deployment workflow.
+      Notes: Include relevant repository paths/links, image references, scripted workflows, and GitHub Actions workflows where available.
+  validations:
+    required: true
+- type: textarea
+  id: related-work
+  attributes:
+    label: Related Repositories, Issues, Contracts, or Systems
+    description: Link existing repositories, proposals, contracts, tickets, dashboards, models, data systems, or prior work.
+  validations:
+    required: false
+- type: textarea
+  id: open-questions
+  attributes:
+    label: Open Questions or Concerns
+    description: List anything the project team wants GitHub administrators, reviewers, project managers, or IT to consider.
+  validations:
+    required: false
