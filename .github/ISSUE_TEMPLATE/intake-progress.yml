@@ -1,0 +1,32 @@
+name: Intake form progress
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  progress:
+    if: >-
+      contains(github.event.issue.labels.*.name, 'project-intake') ||
+      startsWith(github.event.issue.title, 'Digital project intake:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Post completion summary
+        run: python .github/scripts/intake_progress.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

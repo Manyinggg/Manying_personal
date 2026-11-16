@@ -1,22 +1,37 @@
 name: Digital project / IT intake test1
 description: Detailed project and model intake for repository, IT, modeling, architecture, HPC, and hosting coordination.
 title: 'Digital project intake: '
+labels: ["project-intake"]
 body:
+
+# ===========================================================================
+# Intro
+# ===========================================================================
 - type: markdown
   attributes:
     value: |
-      Use this form for project intake and repository/IT coordination. Provide the detailed model, architecture, hosting,
-      data-location, and workflow information requested below.
+      > [!TIP]
+      > **Who completes this form:** the Technical Lead, in consultation with the Project Manager.
+      > Fields marked with a red asterisk (*) are required. After you submit, a completion summary is posted as a
+      > comment on the issue and updates automatically whenever the issue is edited.
 
-      **Who completes this form:** the Technical Lead, in consultation with the Project Manager.
+      | 🗂️ **1 · Project Identity** | 💧 **2 · Model Definition** | ⏱️ **3 · Operational Footprint** | 🏗️ **4 · Technical Architecture** |
+      |:---:|:---:|:---:|:---:|
+      | Client, contacts, data, timeline | Description, platform, location, applications | Runtime, storage, workflows, outputs | Environment, HPC, hosting |
 
-# ---------------------------------------------------------------------------
-# Project Identity
-# ---------------------------------------------------------------------------
+# ===========================================================================
+# Section 1: Project Identity
+# ===========================================================================
 - type: markdown
   attributes:
     value: |
-      ## Project Identity
+      <!-- section: Project Identity -->
+
+      ---
+
+      | 🗂️ &nbsp; **SECTION 1 OF 4 &nbsp;·&nbsp; PROJECT IDENTITY** |
+      |:---|
+      | Client, project code, points of contact, data locations, confidentiality, and timeline. |
 - type: input
   id: client-name
   attributes:
@@ -81,31 +96,278 @@ body:
 - type: markdown
   attributes:
     value: |
-      ### Project Timeline
-- type: input
+      #### 📅 Project Timeline
+      Pick a month and year from each list. Type a year (e.g., 2027) in the list's filter box to jump to it.
+- type: dropdown
   id: project-start
   attributes:
     label: Start Date (Month and Year)
-    description: Enter the month and year in YYYY-MM format.
-    placeholder: e.g., 2026-09
+    options:
+    - January 2026
+    - February 2026
+    - March 2026
+    - April 2026
+    - May 2026
+    - June 2026
+    - July 2026
+    - August 2026
+    - September 2026
+    - October 2026
+    - November 2026
+    - December 2026
+    - January 2027
+    - February 2027
+    - March 2027
+    - April 2027
+    - May 2027
+    - June 2027
+    - July 2027
+    - August 2027
+    - September 2027
+    - October 2027
+    - November 2027
+    - December 2027
+    - January 2028
+    - February 2028
+    - March 2028
+    - April 2028
+    - May 2028
+    - June 2028
+    - July 2028
+    - August 2028
+    - September 2028
+    - October 2028
+    - November 2028
+    - December 2028
+    - January 2029
+    - February 2029
+    - March 2029
+    - April 2029
+    - May 2029
+    - June 2029
+    - July 2029
+    - August 2029
+    - September 2029
+    - October 2029
+    - November 2029
+    - December 2029
+    - January 2030
+    - February 2030
+    - March 2030
+    - April 2030
+    - May 2030
+    - June 2030
+    - July 2030
+    - August 2030
+    - September 2030
+    - October 2030
+    - November 2030
+    - December 2030
+    - January 2031
+    - February 2031
+    - March 2031
+    - April 2031
+    - May 2031
+    - June 2031
+    - July 2031
+    - August 2031
+    - September 2031
+    - October 2031
+    - November 2031
+    - December 2031
+    - January 2032
+    - February 2032
+    - March 2032
+    - April 2032
+    - May 2032
+    - June 2032
+    - July 2032
+    - August 2032
+    - September 2032
+    - October 2032
+    - November 2032
+    - December 2032
+    - January 2033
+    - February 2033
+    - March 2033
+    - April 2033
+    - May 2033
+    - June 2033
+    - July 2033
+    - August 2033
+    - September 2033
+    - October 2033
+    - November 2033
+    - December 2033
+    - January 2034
+    - February 2034
+    - March 2034
+    - April 2034
+    - May 2034
+    - June 2034
+    - July 2034
+    - August 2034
+    - September 2034
+    - October 2034
+    - November 2034
+    - December 2034
+    - January 2035
+    - February 2035
+    - March 2035
+    - April 2035
+    - May 2035
+    - June 2035
+    - July 2035
+    - August 2035
+    - September 2035
+    - October 2035
+    - November 2035
+    - December 2035
   validations:
     required: true
-- type: input
+- type: dropdown
   id: project-end
   attributes:
     label: End Date (Month and Year)
-    description: Optional. Enter the month and year in YYYY-MM format. Leave blank if not yet known.
-    placeholder: e.g., 2027-06
+    description: Optional. Select TBD or leave blank if the end date is not yet known.
+    options:
+    - TBD
+    - January 2026
+    - February 2026
+    - March 2026
+    - April 2026
+    - May 2026
+    - June 2026
+    - July 2026
+    - August 2026
+    - September 2026
+    - October 2026
+    - November 2026
+    - December 2026
+    - January 2027
+    - February 2027
+    - March 2027
+    - April 2027
+    - May 2027
+    - June 2027
+    - July 2027
+    - August 2027
+    - September 2027
+    - October 2027
+    - November 2027
+    - December 2027
+    - January 2028
+    - February 2028
+    - March 2028
+    - April 2028
+    - May 2028
+    - June 2028
+    - July 2028
+    - August 2028
+    - September 2028
+    - October 2028
+    - November 2028
+    - December 2028
+    - January 2029
+    - February 2029
+    - March 2029
+    - April 2029
+    - May 2029
+    - June 2029
+    - July 2029
+    - August 2029
+    - September 2029
+    - October 2029
+    - November 2029
+    - December 2029
+    - January 2030
+    - February 2030
+    - March 2030
+    - April 2030
+    - May 2030
+    - June 2030
+    - July 2030
+    - August 2030
+    - September 2030
+    - October 2030
+    - November 2030
+    - December 2030
+    - January 2031
+    - February 2031
+    - March 2031
+    - April 2031
+    - May 2031
+    - June 2031
+    - July 2031
+    - August 2031
+    - September 2031
+    - October 2031
+    - November 2031
+    - December 2031
+    - January 2032
+    - February 2032
+    - March 2032
+    - April 2032
+    - May 2032
+    - June 2032
+    - July 2032
+    - August 2032
+    - September 2032
+    - October 2032
+    - November 2032
+    - December 2032
+    - January 2033
+    - February 2033
+    - March 2033
+    - April 2033
+    - May 2033
+    - June 2033
+    - July 2033
+    - August 2033
+    - September 2033
+    - October 2033
+    - November 2033
+    - December 2033
+    - January 2034
+    - February 2034
+    - March 2034
+    - April 2034
+    - May 2034
+    - June 2034
+    - July 2034
+    - August 2034
+    - September 2034
+    - October 2034
+    - November 2034
+    - December 2034
+    - January 2035
+    - February 2035
+    - March 2035
+    - April 2035
+    - May 2035
+    - June 2035
+    - July 2035
+    - August 2035
+    - September 2035
+    - October 2035
+    - November 2035
+    - December 2035
   validations:
     required: false
 
-# ---------------------------------------------------------------------------
-# Model Definition
-# ---------------------------------------------------------------------------
+# ===========================================================================
+# Section 2: Model Definition
+# ===========================================================================
 - type: markdown
   attributes:
     value: |
-      ## Model Definition
+      <!-- section: Model Definition -->
+
+      ---
+
+      | 💧 &nbsp; **SECTION 2 OF 4 &nbsp;·&nbsp; MODEL DEFINITION** |
+      |:---|
+      | Model description, platform and version, location, and applications. |
 - type: textarea
   id: model-description
   attributes:
@@ -115,10 +377,6 @@ body:
       estimation.
   validations:
     required: true
-- type: markdown
-  attributes:
-    value: |
-      ### Modeling Platform and Version
 - type: dropdown
   id: model-platform
   attributes:
@@ -142,7 +400,7 @@ body:
   id: model-platform-other
   attributes:
     label: Other Modeling Platform
-    description: Only required if Other was selected above.
+    description: Only needed if Other was selected above.
     placeholder: Specify the modeling platform
   validations:
     required: false
@@ -177,13 +435,19 @@ body:
   validations:
     required: true
 
-# ---------------------------------------------------------------------------
-# Operational Footprint
-# ---------------------------------------------------------------------------
+# ===========================================================================
+# Section 3: Operational Footprint
+# ===========================================================================
 - type: markdown
   attributes:
     value: |
-      ## Operational Footprint
+      <!-- section: Operational Footprint -->
+
+      ---
+
+      | ⏱️ &nbsp; **SECTION 3 OF 4 &nbsp;·&nbsp; OPERATIONAL FOOTPRINT** |
+      |:---|
+      | Runtime, storage, scripted workflows, and where outputs and ancillary data are stored. |
 - type: input
   id: runtime-hours
   attributes:
@@ -193,23 +457,11 @@ body:
   validations:
     required: false
 - type: input
-  id: storage-amount
+  id: storage-per-run
   attributes:
-    label: Storage Per Run — Amount
-    description: Optional. Include input and output files for a single model run.
-    placeholder: e.g., 25
-  validations:
-    required: false
-- type: dropdown
-  id: storage-unit
-  attributes:
-    label: Storage Per Run — Unit
-    description: Optional.
-    options:
-    - KB
-    - MB
-    - GB
-    - TB
+    label: Storage Per Run
+    description: Optional. Enter the number and unit (KB, MB, GB, or TB) for the input and output files of a single model run.
+    placeholder: e.g., 25 GB
   validations:
     required: false
 - type: textarea
@@ -237,13 +489,19 @@ body:
   validations:
     required: true
 
-# ---------------------------------------------------------------------------
-# Technical Architecture
-# ---------------------------------------------------------------------------
+# ===========================================================================
+# Section 4: Technical Architecture
+# ===========================================================================
 - type: markdown
   attributes:
     value: |
-      ## Technical Architecture
+      <!-- section: Technical Architecture -->
+
+      ---
+
+      | 🏗️ &nbsp; **SECTION 4 OF 4 &nbsp;·&nbsp; TECHNICAL ARCHITECTURE** |
+      |:---|
+      | Execution environment, components, HPC and hosting needs, and related systems. |
 - type: textarea
   id: architecture-summary
   attributes:
@@ -325,3 +583,10 @@ body:
     description: List anything the project team wants GitHub administrators, reviewers, project managers, or IT to consider.
   validations:
     required: false
+
+- type: markdown
+  attributes:
+    value: |
+      ---
+
+      ✅ **All done!** Submit the issue to see your completion summary.
