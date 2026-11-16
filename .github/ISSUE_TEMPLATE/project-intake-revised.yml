@@ -29,9 +29,12 @@ body:
 
       ---
 
-      | 🗂️ &nbsp; **SECTION 1 OF 4 &nbsp;·&nbsp; PROJECT IDENTITY** |
-      |:---|
-      | Client, project code, points of contact, data locations, confidentiality, and timeline. |
+      # 🗂️ Section 1 of 4 · Project Identity
+      *Client, project code, points of contact, data locations, confidentiality, and timeline.*
+- type: markdown
+  attributes:
+    value: |
+      ### 🏷️ Project Details
 - type: input
   id: client-name
   attributes:
@@ -52,6 +55,10 @@ body:
     placeholder: e.g., C50238.00
   validations:
     required: true
+- type: markdown
+  attributes:
+    value: |
+      ### 👥 Contacts and Data
 - type: textarea
   id: points-of-contact
   attributes:
@@ -73,6 +80,10 @@ body:
     placeholder: e.g., Egnyte project folder path, Azure storage container, or SharePoint link.
   validations:
     required: true
+- type: markdown
+  attributes:
+    value: |
+      ### 🔒 Access and Permissions
 - type: dropdown
   id: confidentiality-required
   attributes:
@@ -96,7 +107,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      #### 📅 Project Timeline
+      ### 📅 Project Timeline
       Pick a month and year from each list. Type a year (e.g., 2027) in the list's filter box to jump to it.
 - type: dropdown
   id: project-start
@@ -365,9 +376,12 @@ body:
 
       ---
 
-      | 💧 &nbsp; **SECTION 2 OF 4 &nbsp;·&nbsp; MODEL DEFINITION** |
-      |:---|
-      | Model description, platform and version, location, and applications. |
+      # 💧 Section 2 of 4 · Model Definition
+      *Model description, platform and version, location, and applications.*
+- type: markdown
+  attributes:
+    value: |
+      ### 📝 Model Overview
 - type: textarea
   id: model-description
   attributes:
@@ -377,6 +391,10 @@ body:
       estimation.
   validations:
     required: true
+- type: markdown
+  attributes:
+    value: |
+      ### 🧮 Platform and Version
 - type: dropdown
   id: model-platform
   attributes:
@@ -412,6 +430,10 @@ body:
     placeholder: e.g., SWB 2.0
   validations:
     required: false
+- type: markdown
+  attributes:
+    value: |
+      ### 🗺️ Location and Applications
 - type: textarea
   id: location
   attributes:
@@ -445,9 +467,12 @@ body:
 
       ---
 
-      | ⏱️ &nbsp; **SECTION 3 OF 4 &nbsp;·&nbsp; OPERATIONAL FOOTPRINT** |
-      |:---|
-      | Runtime, storage, scripted workflows, and where outputs and ancillary data are stored. |
+      # ⏱️ Section 3 of 4 · Operational Footprint
+      *Runtime, storage, scripted workflows, and where outputs and ancillary data are stored.*
+- type: markdown
+  attributes:
+    value: |
+      ### ⚙️ Runtime and Storage
 - type: input
   id: runtime-hours
   attributes:
@@ -464,6 +489,10 @@ body:
     placeholder: e.g., 25 GB
   validations:
     required: false
+- type: markdown
+  attributes:
+    value: |
+      ### 📂 Workflows and Data Locations
 - type: textarea
   id: model-workflows
   attributes:
@@ -499,9 +528,12 @@ body:
 
       ---
 
-      | 🏗️ &nbsp; **SECTION 4 OF 4 &nbsp;·&nbsp; TECHNICAL ARCHITECTURE** |
-      |:---|
-      | Execution environment, components, HPC and hosting needs, and related systems. |
+      # 🏗️ Section 4 of 4 · Technical Architecture
+      *Execution environment, components, HPC and hosting needs, and related systems.*
+- type: markdown
+  attributes:
+    value: |
+      ### 🖥️ Execution Environment
 - type: textarea
   id: architecture-summary
   attributes:
@@ -531,6 +563,10 @@ body:
       Notes: Include enough detail for an administrator or reviewer to locate the relevant files.
   validations:
     required: false
+- type: markdown
+  attributes:
+    value: |
+      ### ⚡ HPC
 - type: dropdown
   id: hpc-required
   attributes:
@@ -550,6 +586,10 @@ body:
       Notes: Include relevant repository paths/links, image references, scripted workflows, and GitHub Actions workflows where available.
   validations:
     required: true
+- type: markdown
+  attributes:
+    value: |
+      ### 🌐 Web Hosting
 - type: dropdown
   id: web-hosting-required
   attributes:
@@ -569,6 +609,10 @@ body:
       Notes: Include relevant repository paths/links, image references, scripted workflows, and GitHub Actions workflows where available.
   validations:
     required: true
+- type: markdown
+  attributes:
+    value: |
+      ### 🔗 Related Work and Open Questions
 - type: textarea
   id: related-work
   attributes:
